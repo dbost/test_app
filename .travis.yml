@@ -10,3 +10,6 @@ deploy:
   on:
     tags: true
     all_branches: true
+before_script:  
+  - "mkdir -p ~/.composer"
+  - cp .travis.composer.config.json ~/.composer/config.json
