@@ -1,3 +1,6 @@
+before_script:  
+  - "mkdir -p ~/.composer"
+  - cp .travis.composer.config.json ~/.composer/config.json
 language: erlang
 otp_release:
    - 17.3
@@ -10,6 +13,3 @@ deploy:
   on:
     tags: true
     all_branches: true
-before_script:  
-  - "mkdir -p ~/.composer"
-  - cp .travis.composer.config.json ~/.composer/config.json
