@@ -1,7 +1,6 @@
 language: erlang
 otp_release:
 - 17.3
-before_deploy:"pwd"
 before_deploy:
   - "pwd"
   - "ls"
