@@ -4,7 +4,7 @@ otp_release:
 before_deploy:
   - "pwd"
   - "ls"
-  - "zip -r ebin.zip ebin"
+  - "zip -r apps/test_app/ebin.zip ebin"
   - "ls"
 deploy:
   provider: releases
