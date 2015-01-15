@@ -10,15 +10,19 @@ script:
 before_deploy:
   - "pwd"
   - "ls"
+  - "ls apps/test_app"
+  - "ls node"
   - "zip -r ebin.zip apps/test_app/ebin"
   - "ls"
+  - "ls apps/test_app"
+  - "ls node"
 deploy:
   provider: releases
   api_key:
     secure: c8XY7rNh3ntcnu5rojs3X2snFxONtbr5cQ3RAmLKZ/fmoyoCyVctt90tmqpwj3WEeQ/7wlrinxD7TwQiMDfzXV5FIcR4bmiG1/0C65EbXB0nwm3Vu7vb+J4EtnYuq1y5Yqm7L/CxuKrzEJQz5tormW5LBqbRff7Gzg+5P4+u8fA=
   file:
     - "/home/travis/build/dbost/test_app/apps/test_app/.eunit/index.html"
-    - "/home/travis/build/dbost/test_app/apps/test_app/ebin.zip"
+    - "/home/travis/build/dbost/test_app/ebin.zip"
   skip_cleanup: true
   on:
     tags: true
