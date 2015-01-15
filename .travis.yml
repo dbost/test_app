@@ -6,7 +6,6 @@ deploy:
   api_key:
     secure: c8XY7rNh3ntcnu5rojs3X2snFxONtbr5cQ3RAmLKZ/fmoyoCyVctt90tmqpwj3WEeQ/7wlrinxD7TwQiMDfzXV5FIcR4bmiG1/0C65EbXB0nwm3Vu7vb+J4EtnYuq1y5Yqm7L/CxuKrzEJQz5tormW5LBqbRff7Gzg+5P4+u8fA=
   file:
-    - "ebin/test_app.beam"
     - "/home/travis/build/dbost/test_app/.eunit/index.html"
   skip_cleanup: true
   on:
