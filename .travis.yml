@@ -1,12 +1,3 @@
 language: erlang
 otp_release:
    - 17.3
-deploy:
-  provider: releases
-  api-key: "GITHUB OAUTH TOKEN"
-  file:
-    - "/home/travis/build/dbost/test_app/.eunit/index.html"
-  skip_cleanup: true
-  on:
-    tags: true
-    all_branches: true
