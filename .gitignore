@@ -1,6 +1,6 @@
 ebin
 .eunit
 .rebar
-*.*~
+*~
 *.beam
 logs
