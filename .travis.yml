@@ -15,4 +15,5 @@ deploy:
     - "/home/travis/build/dbost/test_app/ebin.zip"
   skip_cleanup: true
   on:
+    tags: true
     all_branches: true
