@@ -1,10 +1,16 @@
 language: erlang
 otp_release:
 - 17.3
+script:
+  - rebar get-deps
+  - rebar compile
+  - rebar -r eunit skip_deps=true
+  - rebar -r ct
+  - rebar generate
 before_deploy:
   - "pwd"
   - "ls"
-  - "zip -r apps/test_app/ebin.zip ebin"
+  - "zip -r ebin.zip apps/test_app/ebin"
   - "ls"
 deploy:
   provider: releases
