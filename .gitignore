@@ -4,3 +4,4 @@ ebin
 *~
 *.beam
 logs
+node/test_app
