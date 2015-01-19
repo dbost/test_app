@@ -7,6 +7,12 @@ script:
   - rebar -r eunit skip_deps=true
   - rebar -r ct
   - rebar generate
+after_script:
+  - "pwd"
+  - "ls -al"
+  - git status
+  - git checkout master
+  - git status
 before_deploy:
   - "pwd"
   - "ls -al"
@@ -15,6 +21,11 @@ before_deploy:
   - "zip -r test_app_node.zip node/test_app"
   - "zip -r eunit.zip apps/test_app/.eunit"
   - "zip -r ct_logs.zip apps/test_app/logs"
+  - "pwd"
+  - "ls -al"
+  - git status
+  - git checkout master
+  - git status
 deploy:
   provider: releases
   api_key:
@@ -27,9 +38,3 @@ deploy:
   on:
     tags: true
     all_branches: true
-after_success:
-  - "pwd"
-  - "ls -al"
-  - git status
-  - git checkout master
-  - git status
