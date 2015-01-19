@@ -7,7 +7,9 @@ script:
   - rebar -r eunit skip_deps=true
   - rebar -r ct
   - rebar generate
+  - git stash
   - git status
+  - git stash pop
 after_script:
   - git status
 before_deploy:
