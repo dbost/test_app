@@ -28,4 +28,5 @@ deploy:
     tags: true
     all_branches: true
 after_success:
+  - git checkout master
   - git status
